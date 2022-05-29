@@ -1,0 +1,12 @@
+[submodule "BadBank"]
+	path = BadBank
+	url = https://github.com/Chokhonelidze/BadBank.git
+[submodule "crud"]
+	path = crud
+	url = https://github.com/Chokhonelidze/crud.git
+[submodule "shoppingcart"]
+	path = shoppingcart
+	url = https://github.com/Chokhonelidze/shoppingcart.git
+[submodule "jwt"]
+	path = jwt
+	url = https://github.com/Chokhonelidze/jwt.git

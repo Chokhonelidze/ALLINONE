@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  auth1:
+    build: "jwt"
+    ports:
+      - "3001:3001"
+    environment:
+      - DB=mongodb://mongo:27017/app_development
+    image: chokhonelidze/auth:latest
+  crud: 
+    build: "crud"
+    ports:
+      - "3000:3000"
+    environment:
+      - DB=mongodb://mongo:27017/app_development
+    depends_on:
+      - mongo
+    links:
+      - mongo
+    image: chokhonelidze/crud:latest
+  badbank:
+    build: "BadBank"
+    ports:
+      - "5001:5001"
+    environment:
+      - REACT_APP_SERVER=http://localhost:3000
+      - REACT_APP_LOGINSERVER=http://localhost:3001
+  shoppingcart: 
+    build: "shoppingcart"
+    ports:
+      - "5000:5000"
+    environment:
+      - REACT_APP_SERVER=http://localhost:3000
+      - REACT_APP_LOGINSERVER=http://localhost:3001
+  mongo:
+    image: mongo
+
+    ports:
+      - "27017:27017"
