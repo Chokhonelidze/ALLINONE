@@ -6,9 +6,10 @@ This is a dockerized application that combines: BadBank, CRUD( backend server), 
 
 
 ## Installation Guidelines: 
-### run https://github.com/Chokhonelidze/ALLINONE.git 
-### OR 
-### git@github.com:Chokhonelidze/ALLINONE.git
+### run for SSH
+### git clone --recurse-submodules -j8 git@github.com:Chokhonelidze/ALLINONE.git
+### OR for HTTPS
+### git clone --recurse-submodules -j8 https://github.com/Chokhonelidze/ALLINONE.git
 
 ### you should have docker installed.
 ### after you clone this repository go to root folder and run:
