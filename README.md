@@ -17,3 +17,4 @@ This is a dockerized application that combines: BadBank, CRUD( backend server), 
 
 ### if you change application and want to see changes in local you can run :
 ## docker-compose up --build 
+##
